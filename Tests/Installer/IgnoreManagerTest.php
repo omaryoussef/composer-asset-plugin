@@ -207,7 +207,7 @@ class IgnoreManagerTest extends \PHPUnit_Framework_TestCase
         $this->assertFileExists($this->target.'/tests');
     }
 
-    public function testIgnoreAllFilesExceptAFewWithDoubleAsterisks()
+    public function testIgnoreAllFilesExceptAFewWillPreserveParentsOfNestedPaths()
     {
         $ignorer = new IgnoreManager($this->target);
 
